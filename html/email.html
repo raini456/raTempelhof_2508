@@ -1,0 +1,38 @@
+ <main role="main" ng-controller="emailCtrl">   
+      <section id="article1Kanzlei">
+       <h2 id="startTextForm">Email</h2>
+       <p id="untertitelForm">Sie k&ouml;nnen &uuml;ber dieses Formular Kontakt zu mir aufnehmen</p>  
+     
+     <form action="http://www.dw-formmailer.de/cgi-bin/dwmailer/dwmailer.pl" method="post">
+      <input name="empfaenger_name" value="Rainer Doering" type="hidden">
+           <input name="empfaenger_mail" value="ra.doering@t-online.de" type="hidden">
+           <input name="betreff" value="Kontakt &uuml;ber www.ra-doering.de" type="hidden">
+           <input name="pflicht" value="absender_name,absender_email,absender_nachricht" type="hidden">
+           <font size="-2">
+           Ihr Name:*<br>
+           <input type="text" size="25" maxlength="40" name="absender_name" id="absender_name" required><br>
+           Ihre Email-Adresse:*<br>
+           <input type="text" size="25" maxlength="40" name="absender_email" id="absender_email" required><br>
+           Ihre Telefonnummer:<br>
+           <input type="text" size="25" maxlength="40" name="tel_fn" id="tel_fn"><br>
+           Ihre Handynummer:<br>
+           <input type="text" size="25" maxlength="40" name="tel_mobil" id="tel_mobil"><br>
+           Ihre Nachricht:*<br>
+           <textarea name="absender_nachricht" id="absenderNachricht" cols=30 rows=5 required></textarea><br>
+            Ihr Anliegen (bitte w&auml;hlen Sie aus)<br>
+            <select name="Anliegen">
+                 <option>Mietrecht</option>
+                 <option>Verkehrsrecht</option>
+                 <option>Familienrecht</option>
+                 <option>Sonstige Rechtsgebiete</option>
+                 <option>Weiteres</option>
+            </select><br><br>
+            <input type="checkbox" id="dataCheck" />&nbsp;&nbsp;&nbsp;
+            Ich habe zur Kenntnis genommen und bin damit einverstanden, dass die von mir gesendeten Daten von der Kanzlei Döring gespeichert werden. Die <a href="#/datenschutz">Datenschutzerklärung</a> habe ich ebenfalls zur Kenntnis genommen.
+           <br><br>
+           </font>
+          
+          <input value="Absenden" type="submit" id="inputSubmit"> 
+     </form>
+    </section>  
+  </main><!--end main-->  
