@@ -19,8 +19,9 @@
     <body ng-app="mainApp">
 
         <div data-role="page" id="page_home">
-            <div data-role="header" data-position="fixed">
-                <h1>Das Wetter</h1>
+            <div data-role="header" data-position="fixed" >
+                
+                <h1>Rechtsanwaltskanzlei <br>Rainer Döring</h1>
                 <!--input type='text' ng-model='test'><br>
                 {{test}}-->
             </div>
