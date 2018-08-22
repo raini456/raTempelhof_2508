@@ -7,20 +7,22 @@
         <link rel="stylesheet" href="assets/css/themes/mycolors.css" />
         <link rel="stylesheet" href="assets/css/themes/jquery.mobile.icons.min.css" />
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
-        <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
-        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> 
-        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
         <link rel="stylesheet" href="assets/css/themes/jquery.mobile.structure-1.4.5.min.css" /> 
         <script src="assets/js/lib/jquery-1.11.1.min.js"></script> 
         <script src="assets/js/lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="assets/js/lib/angularJS.js" type="text/javascript"></script>
+        <script src="assets/js/lib/ngRoute.js" type="text/javascript"></script>
+        <script src="assets/js/mainJS.js" type="text/javascript"></script>
         <script src="assets/js/weather.js" type="text/javascript"></script>
 
     </head>
-    <body>
+    <body ng-app="mainApp">
 
         <div data-role="page" id="page_home">
             <div data-role="header" data-position="fixed">
                 <h1>Das Wetter</h1>
+                <!--input type='text' ng-model='test'><br>
+                {{test}}-->
             </div>
             <div data-role="navbar" data-grid="c">
     <ul>
