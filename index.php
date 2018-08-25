@@ -4,89 +4,55 @@
         <title>Rechtanwalt Berlin Tempelhof</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="assets/css/themes/mycolors.css" />
-        <link rel="stylesheet" href="assets/css/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="assets/css/lib/mycolors.css" />
+        <link rel="stylesheet" href="assets/css/lib/jquery.mobile.icons.min.css" />
+        <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/styles.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="assets/css/themes/jquery.mobile.structure-1.4.5.min.css" /> 
+        <link rel="stylesheet" href="assets/css/lib/jquery.mobile.structure-1.4.5.min.css" /> 
         <script src="assets/js/lib/jquery-1.11.1.min.js"></script> 
         <script src="assets/js/lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="assets/js/lib/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/js/lib/angularJS.js" type="text/javascript"></script>
         <script src="assets/js/lib/ngRoute.js" type="text/javascript"></script>
         <script src="assets/js/mainJS.js" type="text/javascript"></script>
-        <script src="assets/js/weather.js" type="text/javascript"></script>
-
     </head>
-    <body ng-app="mainApp">
-
-        <div data-role="page" id="page_home">
-            <div data-role="header" data-position="fixed" >
+    <body ng-app="mainApp"> 
+        <div data-role="content">
+            <div data-role="page" id="page_home">
+                <header>
+                    <div class='row'>
+                        <h1>Rechtsanwaltskanzlei Rainer Döring</h1>
+                        <!--input type='text' ng-model='test'><br>
+                        {{test}}-->
+                    </div>
+                    <div data-role="navbar" data-grid="b">
+                        <ul>
+                            <!--li><a href="#" class="ui-btn-active">One</a></li-->
+                            <li><a href="#/miete">Mietrecht</a></li>
+                            <li><a href="#/verkehr">Verkehrsrecht</a></li>
+                            <li><a href="#/familie">Familienrecht</a></li>
+                        </ul>
+                    </div><!-- /navbar -->
+                </header>
+                <div class='row'>                  
+                    <div class="col-2" ng-include="'html/asideLeft.html'"></div>
+                    <div class="col-8" ng-view="view"></div>
+                    <div class="col-2" ng-include="'html/asideRight.html'"></div>
+                </div>
                 
-                <h1>Rechtsanwaltskanzlei <br>Rainer Döring</h1>
+                
+
+
                 <!--input type='text' ng-model='test'><br>
                 {{test}}-->
-            </div>
-            <div data-role="navbar" data-grid="c">
-    <ul>
-        <li><a href="#" class="ui-btn-active">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
-    </ul>
-</div><!-- /navbar -->
-            <div data-role="content"> 
-                <div data-role="panel" id="sideNav" data-display="overlay"><!-- oder auch push oder reveal-->
-                    <div data-role="controlgroup" id="select_tmp" data-type="horizontal">                
-                        <a href="#" class="ui-btn ui-btn-d ui-corner-all selectBtnTmp" data-tmp="fahrenheit" data-rel="close">Fahrenheit</a>
-                        <a href="#" class="ui-btn ui-btn-d ui-corner-all selectBtnTmp" data-tmp="metric" data-rel="close">Celsius</a>                
-                    </div>
-                    
-                    <div data-role="controlgroup" id="select_country" data-type="horizontal">                
-                        <a href="#" class="ui-btn ui-btn-d ui-corner-all selectBtnCountry" data-rel="close" data-lang="de"><img src="assets/images/german.png" width="40" height="40" alt="german flag"/></a>
-                        <a href="#" class="ui-btn ui-btn-d ui-corner-all selectBtnCountry" data-rel="close" data-lang="en"><img src="assets/images/english.png" width="40" height="40" alt="english flag"/></a>
-                        <a href="#" class="ui-btn ui-btn-d ui-corner-all selectBtnCountry" data-rel="close" data-lang="fr"><img src="assets/images/french.png" width="40" height="40" alt="french flag"/></a>                                        
-                    </div>
-                    <a href="#" class="ui-btn ui-btn-b" data-rel="close">CLOSE</a>                
-                </div>                
-                <a href="#sideNav" class="ui-btn ui-btn-b ui-icon-bars ui-btn-icon-left ui-icon-gear">EINSTELLUNGEN</a>
-                <div class="ui-field-contain">    
-                    <select data-native-menu="false" id="select_city" data-iconpos="left">
-                        <option value="">Bitte Stadt wählen</option>        
-                        <option value="Bangkok">Bangkok</option>
-                        <option value="Berlin, de">Berlin</option>
-                        <option value="London">London</option>
-                        <option value="New York">New York</option>
-                        <option value="Paris">Paris</option>
-                        <option value="Tokyo">Tokyo</option>
-                        <option value="Rio">Rio</option>
-                        <option value="Lima">Lima</option>
-                        <option value="Honolulu">Honolulu</option>                        
-                    </select>
-                </div>
-                <div class="ui-grid-a"><!--grid-a ist zweispaltig-->
-                    <div class="ui-block-a" id="content_place">
 
-                    </div>
-                    <div class="ui-block-b">
-                        <div id="content_weather"></div>                            
-                    </div>
-                    <hr>
-                    <div class="ui-block-a">
-                        <div id="content_description"></div>                            
-                    </div>
-                    <div class="ui-block-b">
-                        <div id="content_pressure"></div>
-                    </div>
-                </div>
-                <hr>
-                <h3>Vorschau</h3>
-                <div class="ui-grid-d" id="forecastHour"></div>
-                <div class="ui-grid-d" id="forecastTmp"></div>
-                <div class="ui-grid-d" id="forecastIcon"></div>
+                
+                
                 <div data-role="footer" data-position="fixed">
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&copy; Stefan Landvogt 2018</p>
+                    <div ng-include="'html/footer.html'"></div>
                 </div>
-
             </div>
+        </div>
 
     </body>
 </html>

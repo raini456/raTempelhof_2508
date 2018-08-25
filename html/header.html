@@ -1,60 +1,16 @@
-<header ng-controller="headerCtrl">
-  <div data-role="header" data-position="fixed">
-                <h1 id="headline">Rechtsanwaltskanzlei Rainer Döring</h1>
-                <div data-role="navbar" data-grid="c">
+
+            <div data-role="header" data-position="fixed" >
+                
+                <h1>Rechtsanwaltskanzlei <br>Rainer Döring</h1>
+                <!--input type='text' ng-model='test'><br>
+                {{test}}-->
+            </div>
+            <div data-role="navbar" data-grid="c">
     <ul>
         <li><a href="#" class="ui-btn-active">One</a></li>
-        <li><a href="#">Two</a></li>
-        <li><a href="#">Three</a></li>
-        <li><a href="#">Four</a></li>
+        <li><a href="#/miete">Mietrecht</a></li>
+        <li><a href="#/verkehr">Verkehrsrecht</a></li>
+        <li><a href="#/familie">Familienrecht</a></li>
     </ul>
 </div><!-- /navbar -->
-                
-                <!--input type="text" ng-model="test"><br>
-               {{test}}-->
-            </div>
-  <div class="row" id="banner">   
-    <div class="col-5 col-sm-4 col-md-4">
-      <a href="#/"><div id="logo"></div></a>
-    </div>
-    <div class="col-7 col-sm-8" id="titleBanner"></div>      
-
-    <div class="col-0"></div>    
-  </div><!--close row-->
-
-  <div class="row">                    
-    <div class="col-3"></div>
-    <div class="col-9">
-      <nav id="navTop">
-        <ul>           
-          <li>
-            <a href="#/verkehrsrecht"><div class="btnNav" id="btnNavVerkehr"></div></a>         
-          </li>
-          <li>
-            <a href="#/familienrecht"><div class="btnNav" id="btnNavFamilie"></div></a>
-          </li>
-          <li>
-            <a href="#/mietrecht"><div class="btnNav" id="btnNavMiete"></div></a>
-          </li>
-        </ul>            
-      </nav>
-      
-	
-
-      <div id="navSandwich"></div>
-
-      <ul id="navToggleSmall">
-       <a ng-href="#/"><li id="liHomeSmall">Home</li></a>      
-       <a ng-href="#/schwerpunkte"><li id="liSchwerpunkteSmall">Schwerpunkte</li></a>
-       <a ng-href="#/leistungen"><li id="liLeistungenSmall">Leistungen</li></a>
-       <a ng-href="#/team"><li id="liTeamSmall">Team</li></a>
-       <a ng-href="#/rechtsprechung"><li id="liIhrRechtSmall">Ihr Recht</li></a>
-
-       <a ng-href="#/kontakt"><li id="liKontaktSmall">Kontakt</li></a>
-       <a ng-href="#/impressum"><li id="liImpressumSmall">Impressum</li></a>
-       <a ng-href="#/datenschutz"><li id="liDatenschutzSmall">Datenschutz</li></a>
-     </ul> 
-
-   </div>
- </div>
-</header>
+       

@@ -1,6 +1,9 @@
+$.mobile.linkBindingEnabled = false;
+$.mobile.hashListeningEnabled = false;
 var app=angular.module("mainApp",['ngRoute']);
 
 app.config(['$routeProvider', function($routeProvider){
+    
     $routeProvider
         .when('/',{
             templateUrl:'html/main.html', 
@@ -18,19 +21,19 @@ app.config(['$routeProvider', function($routeProvider){
             templateUrl:'html/leistungen.html', 
             controller:'leistungenCtrl'
         }) 
-        .when("/mietrecht",{
-            templateUrl:'html/taetigkeitsschwerpunkte_mietrecht.html',
+        .when("/miete",{
+            templateUrl:'html/mietrecht.html',
             controller:'mietrechtCtrl'
         }) 
-        .when("/familienrecht",{
-            templateUrl:'html/taetigkeitsschwerpunkte_familienrecht.html',
+        .when("/familie",{
+            templateUrl:'html/familienrecht.html',
             controller:'familienrechtCtrl'  
         })
-        .when("/verkehrsrecht",{
-            templateUrl:'html/taetigkeitsschwerpunkte_verkehrsrecht.html',
+        .when("/verkehr",{
+            templateUrl:'html/verkehrsrecht.html',
             controller:'verkehrsrechtCtrl'
         })/**/
-        .when("/taetigkeitsschwerpunkte_weitere",{
+        .when("/weitere",{
             templateUrl:'html/taetigkeitsschwerpunkte_weitere.html',
             controller:'weitereCtrl'
         })
@@ -66,6 +69,15 @@ app.config(['$routeProvider', function($routeProvider){
             redirectTo:'html/main.html'
         });
     }]);
+ngApp.directive('jqm', function($timeout) {
+  return {
+    link: function(scope, elm, attr) {
+        $timeout(function(){
+            elm.trigger('create');
+        });
+    }
+  };
+});
 app.controller('indexCtrl', function(){
         var siteWidth = window.innerWidth;
         siteWidth="gfgf";

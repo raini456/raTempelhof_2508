@@ -1,21 +1,21 @@
 	
 <div ng-controller="asideLeftCtrl">
- <nav id="navLeft">
-    <ul>
-     <li  class="ml-5" id="liHome"><a ng-href="#/">Home</a></li>
-     <li class="ml-5" id="liKanzlei">Kanzlei
-        <ul id="ulKanzlei">
-            <li class="liUlKanzlei"><a ng-href="#/schwerpunkte">Schwerpunkte</a></li>
-            <li class="liUlKanzlei"><a ng-href="#/leistungen">Leistungen</a></li>
-            <li class="liUlKanzlei"><a ng-href="#/team">Team</a></li>
-        </ul>     
-    </li>
-    <li class="ml-5" id="liIhrRecht"><a ng-href="#/rechtsprechung">Ihr Recht</a></li>
-    <li class="ml-5"><a ng-href="#/kontakt">Kontakt</a></li>
-    <li class="ml-5"><a ng-href="#/impressum">Impressum</a></li>
-    <li class="ml-5"><a ng-href="#/datenschutz">Datenschutz</a></li>
-</ul>            
-</nav>	
-
+    <nav id="navLeft">
+    <div class="dropdown">
+    <a ng-href="#/" class='btn'>Home</a>
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuKanzlei" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Kanzlei
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuKanzlei">
+    <a class="dropdown-item" href="#/schwerpunkte">Schwerpunkte</a>
+    <a class="dropdown-item" href="#/leistungen">Leistungen</a>
+    <a class="dropdown-item" href="#/team">Team</a>
+  </div>
+    <a ng-href="#/rechtsprechung" class='btn'>Ihr Recht</a>
+    <a ng-href="#/kontakt" class='btn'>Kontakt</a>
+    <a ng-href="#/impressum" class='btn'>Impressum</a>
+    <a ng-href="#/datenschutz" class='btn'>Datenschutz</a>
+</div>
+ </nav>	
 </div>
 		
